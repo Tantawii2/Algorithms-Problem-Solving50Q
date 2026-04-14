@@ -1,14 +1,14 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 #include <cstdlib>
 using namespace std;
 
-void readArray(int arr[100], int size)
 
+void readArray(int arr[100], int size)
 {
-    for (int i = 1; i <= size; i++)
+    for (int i = 0; i < size; i++)
     {
-        arr[i] = rand() % (100 - 0 + 1) + 0;
+        arr[i] = rand() % 101; // من 0 إلى 100
     }
 }
 

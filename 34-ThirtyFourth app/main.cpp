@@ -13,17 +13,24 @@ void readArray(int arr[], int size)
     }
 }
 
-void SearchInArray(int arr[], int size , int target)
+void SearchInArray(int arr[], int size, int target)
 {
-    for (int i = 0; i < arr; i++)
+    int flag = 0;
+    for (int i = 0; i < size; i++)
     {
         if (arr[i] == target)
         {
-            cout << "Number you are looking for is : " << target;
-            cout << "The Number Found at Position : " << i + 1;
-            cout << "The Number Found it's order : " << i
+            cout << "Number you are looking for is : " << target << endl;
+            cout << "The Number Found at Position : " << i + 1 << endl;
+            cout << "The Number Found it's order : " << i << endl;
+            flag = 1;
         }
+
     }
+    if (flag == 0)
+        cout << "The Number is not found :-( " << endl;
+
+
 }
 
 
@@ -49,7 +56,7 @@ int main()
 
     cout << "Please Enter a Number To Search For? ";
     cin >> TargetNumber;
-    SearchInArray(arr1, size,TargetNumber);
+    SearchInArray(arr1, size, TargetNumber);
 
     return 0;
 }
